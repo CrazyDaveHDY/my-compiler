@@ -1,0 +1,36 @@
+[main]
+main:
+    (=,10,_,a)
+    (=,8,_,b)
+    next1 = 1
+    next2 = -1
+Label1:
+    (j<,a,0,Label4)
+    next1 = 2
+    next2 = 4
+Label2:
+    (par,b,_,_)
+    (par,b,_,_)
+    (call,mul,_,_)
+    next1 = 3
+    next2 = -1
+Label3:
+    (=,@RETURN_PLACE,_,T1)
+    (=,T1,_,b)
+    (-,a,1,T2)
+    (=,T2,_,a)
+    (j,_,_,Label1)
+    next1 = 1
+    next2 = -1
+Label4:
+    (return,_,_,_)
+    next1 = -1
+    next2 = -1
+[mul]
+mul:
+    (get,_,_,x)
+    (get,_,_,y)
+    (*,x,y,T0)
+    (return,T0,_,_)
+    next1 = -1
+    next2 = -1

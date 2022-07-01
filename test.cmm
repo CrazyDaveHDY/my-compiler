@@ -1,0 +1,17 @@
+int mul(int x, int y)
+{
+    return x*y;
+}
+
+void main(void)
+{
+    a=10;
+    b=8;
+    while(a>=0)
+    {
+        b=mul(b, b);
+        a=a-1;
+	}
+    return;
+}
+#
